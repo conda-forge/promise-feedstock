@@ -1,6 +1,6 @@
 {% set name = "promise" %}
-{% set version = "1.0.1" %}
-{% set sha256 = "c18c66b506e7d896d80a87344d3fb3653a491cd1cb948abca705730044ee3824" %}
+{% set version = "2.0.2" %}
+{% set sha256 = "f6ac7ec189bfb14ab8987f211db85fa8147fe13ca5d2a8c15926307d8948c082" %}
 
 package:
   name: {{ name|lower }}
@@ -19,8 +19,10 @@ requirements:
   build:
     - python
     - setuptools
+
   run:
     - python
+    - six
     - typing
 
 test:
