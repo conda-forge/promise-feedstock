@@ -1,6 +1,6 @@
 {% set name = "promise" %}
-{% set version = "2.0.2" %}
-{% set sha256 = "f6ac7ec189bfb14ab8987f211db85fa8147fe13ca5d2a8c15926307d8948c082" %}
+{% set version = "2.1.dev20170724043809" %}
+{% set sha256 = "18b65911b290b3ff42013c60721b8293371680fc660859a01a9a3e3012b24fbd" %}
 
 package:
   name: {{ name|lower }}
