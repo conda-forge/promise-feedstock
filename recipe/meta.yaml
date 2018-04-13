@@ -1,6 +1,6 @@
 {% set name = "promise" %}
-{% set version = "2.0.2" %}
-{% set sha256 = "f6ac7ec189bfb14ab8987f211db85fa8147fe13ca5d2a8c15926307d8948c082" %}
+{% set version = "2.1" %}
+{% set sha256 = "95506bac89df7a495e0b8c813fd782dd1ae590decb52f95248e316c6659ca49b" %}
 
 package:
   name: {{ name|lower }}
@@ -12,6 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
+  noarch: python
   number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
