@@ -12,19 +12,18 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  noarch: python
-  number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 1
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
-  build:
+  host:
     - python
-    - setuptools
+    - pip
 
   run:
     - python
     - six
-    - typing
+    - typing  # [py<35]
 
 test:
   imports:
