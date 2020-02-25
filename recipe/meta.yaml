@@ -1,18 +1,16 @@
 {% set name = "promise" %}
-{% set version = "2.2.1" %}
-{% set sha256 = "348f5f6c3edd4fd47c9cd65aed03ac1b31136d375aa63871a57d3e444c85655c" %}
+{% set version = "2.3" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: dfd18337c523ba4b6a58801c164c1904a9d4d1b1747c7d5dbf45b693a49d93d0
 
 build:
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
@@ -23,7 +21,7 @@ requirements:
   run:
     - python
     - six
-    - typing  # [py<35]
+    - typing >=3.6.4  # [py<35]
 
 test:
   imports:
@@ -33,7 +31,7 @@ about:
   home: https://github.com/syrusakbary/promise
   license: MIT
   license_family: MIT
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
+  license_file: LICENSE
   summary: 'Ultra-performant Promise implementation in Python'
   description: |
       This is a implementation of Promises in Python. It is a super set of
@@ -47,3 +45,5 @@ extra:
   recipe-maintainers:
     - dfroger
     - pmlandwehr
+    - carlodri
+    
