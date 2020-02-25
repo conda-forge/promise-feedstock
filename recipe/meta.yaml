@@ -21,7 +21,7 @@ requirements:
   run:
     - python
     - six
-    - typing >=3.6.4 # [py<35]
+    - typing >=3.6.4  # [py<35]
 
 test:
   imports:
