@@ -322,5 +322,4 @@ Feedstock Maintainers
 
 * [@carlodri](https://github.com/carlodri/)
 * [@dfroger](https://github.com/dfroger/)
-* [@pmlandwehr](https://github.com/pmlandwehr/)
 
